@@ -1,4 +1,3 @@
-package week1.exercise1;
 import java.util.HashMap;
 import java.util.Scanner;
 
