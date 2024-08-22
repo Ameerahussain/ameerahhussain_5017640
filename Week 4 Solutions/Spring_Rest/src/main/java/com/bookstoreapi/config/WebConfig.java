@@ -10,7 +10,6 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void configureContentNegotiation(ContentNegotiationConfigurer configurer) {
-        // Configure content negotiation to use the "accept" header
         configurer.favorParameter(false)
                   .ignoreAcceptHeader(false)
                   .defaultContentType(MediaType.APPLICATION_JSON)

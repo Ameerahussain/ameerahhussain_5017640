@@ -21,7 +21,6 @@ public class BookClient {
                 .retrieve()
                 .bodyToMono(EntityModel.class)
                 .map(entityModel -> {
-                    // Extract book details and navigate using HATEOAS links
                     return (BookDTO) entityModel.getContent();
                 });
     }
@@ -33,7 +32,6 @@ public class BookClient {
                 .retrieve()
                 .bodyToMono(EntityModel.class)
                 .map(entityModel -> {
-                    // Extract created book details and navigate using HATEOAS links
                     return (BookDTO) entityModel.getContent();
                 });
     }
@@ -45,7 +43,6 @@ public class BookClient {
                 .retrieve()
                 .bodyToMono(EntityModel.class)
                 .map(entityModel -> {
-                    // Extract updated book details and navigate using HATEOAS links
                     return (BookDTO) entityModel.getContent();
                 });
     }

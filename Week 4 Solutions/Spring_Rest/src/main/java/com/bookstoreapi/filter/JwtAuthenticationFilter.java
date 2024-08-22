@@ -25,29 +25,23 @@ public class JwtAuthenticationFilter extends UsernamePasswordAuthenticationFilte
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
         try {
-            // Parse the credentials from the request body
             LoginRequest loginRequest = new ObjectMapper().readValue(request.getInputStream(), LoginRequest.class);
 
-            // Create an AuthenticationToken
             UsernamePasswordAuthenticationToken authenticationToken = new UsernamePasswordAuthenticationToken(
                     loginRequest.getUsername(),
                     loginRequest.getPassword(),
                     Collections.emptyList()
             );
 
-            // Authenticate
             return authenticationManager.authenticate(authenticationToken);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
-    
-    // Define LoginRequest class (used to parse JSON request body)
     private static class LoginRequest {
         private String username;
         private String password;
 
-        // Getters and setters
         public String getUsername() { return username; }
         public void setUsername(String username) { this.username = username; }
         public String getPassword() { return password; }

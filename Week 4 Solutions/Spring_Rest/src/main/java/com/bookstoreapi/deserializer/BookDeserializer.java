@@ -10,7 +10,6 @@ import java.io.IOException;
 public class BookDeserializer extends JsonDeserializer<Book> {
     @Override
     public Book deserialize(JsonParser p, DeserializationContext ctxt) throws IOException {
-        // Custom deserialization logic here
-        return new Book(); // Replace with actual deserialization logic
+        return new Book();
     }
 }

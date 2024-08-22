@@ -6,7 +6,7 @@ import java.util.Optional;
 
 public interface BookService {
     BookDTO createBook(BookDTO bookDTO);
-    Optional<BookDTO> getBookById(Long id);  // This should return Optional<BookDTO>
+    Optional<BookDTO> getBookById(Long id); 
     List<BookDTO> getAllBooks();
     BookDTO updateBook(Long id, BookDTO bookDTO);
     void deleteBook(Long id);

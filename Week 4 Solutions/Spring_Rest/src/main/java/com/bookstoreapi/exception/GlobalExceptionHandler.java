@@ -23,8 +23,7 @@ public class GlobalExceptionHandler {
 
         HttpHeaders headers = new HttpHeaders();
         headers.add("Custom-Header", "ResourceNotFound");
-        // Description: "Custom-Header: ResourceNotFound" indicates that the requested resource was not found.
-
+       
         return new ResponseEntity<>(errorDetails, headers, HttpStatus.NOT_FOUND);
     }
 
@@ -37,7 +36,6 @@ public class GlobalExceptionHandler {
 
         HttpHeaders headers = new HttpHeaders();
         headers.add("Custom-Header", "InvalidInput");
-        // Description: "Custom-Header: InvalidInput" indicates that the input provided was invalid.
 
         return new ResponseEntity<>(errorDetails, headers, HttpStatus.BAD_REQUEST);
     }
@@ -51,8 +49,7 @@ public class GlobalExceptionHandler {
 
         HttpHeaders headers = new HttpHeaders();
         headers.add("Custom-Header", "GlobalException");
-        // Description: "Custom-Header: GlobalException" indicates that an unexpected error occurred.
-
+     
         return new ResponseEntity<>(errorDetails, headers, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 }

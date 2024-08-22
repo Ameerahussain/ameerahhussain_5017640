@@ -31,8 +31,6 @@ public class Customer {
     @Version
     private Long version;
 
-    // Getters and setters
-
     public Long getId() {
         return id;
     }
